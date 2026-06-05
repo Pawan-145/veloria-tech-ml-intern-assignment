@@ -3,23 +3,6 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 import chromadb
 
-"""
-================================================================================
-                               README & EXPLANATION
-================================================================================
-WHAT I BUILT & HOW IT WORKS:
-1. Data Stringification: Loads the Task 1 CSV dataset and transforms each row 
-   into a natural sentence matching your specified template format.
-2. Vector Embeddings: Uses the 'all-MiniLM-L6-v2' model from sentence-transformers 
-   to convert sentences into dense mathematical vector representation arrays.
-3. Vector Database Storage (ChromaDB): All match vectors along with their original 
-   text narratives are written directly into an in-memory ChromaDB collection.
-4. Interactive Retrieval Engine: Runs a live console input loop. The query gets 
-   vectorized natively by ChromaDB, which instantly computes and displays the top 
-   3 most semantically accurate matching match rows.
-================================================================================
-"""
-
 print("=== Step 1: Converting CSV Data into Custom Sentence Format ===")
 
 # Dynamic path directory safety check (handles both task1 and task_1 folder names)
